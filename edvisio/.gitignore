@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+edvisio/yarn.lock
+build
+edvisio_demo/public/edvisio
