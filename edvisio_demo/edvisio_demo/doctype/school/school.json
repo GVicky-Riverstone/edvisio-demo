@@ -1,0 +1,313 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "School-.####",
+ "creation": "2024-06-24 21:27:39.909525",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "create_school_tab",
+  "school_name",
+  "is_this_a_master_school",
+  "master_school_name",
+  "opeid",
+  "address_1",
+  "address_2",
+  "city",
+  "state",
+  "zip",
+  "servicer",
+  "column_break_mdyj",
+  "privacy_notice",
+  "pn_legal_school_name",
+  "pn_school_contact_name",
+  "pn_school_contact_phone_number",
+  "pn_school_contact_email",
+  "launch_servicing_lender_id",
+  "site_guid",
+  "product_guid",
+  "school_website",
+  "tuitionease_configuration_tab",
+  "tease_configurations_section",
+  "tutionease_allow_borrower_initiated_applications",
+  "tuitionease_allow_school_initiated_applications",
+  "tuitionextend_configurations_tab",
+  "tuition_extend_setup_school_repayment_terms_section",
+  "textend_repayment_type",
+  "textend_configurations_section",
+  "tutionextend_allow_borrower_initiated_applications",
+  "tuitionextend_allow_school_initiated_applications",
+  "tuitionextend_interest_rate",
+  "tuitionflexplus_configurations_tab",
+  "tfplus_setup_school_repayment_terms_section",
+  "tfplus_repayment_type",
+  "tfplus_configurations_section",
+  "tutionflexplus_allow_borrower_initiated_applications",
+  "tuitionflexplus_allow_school_initiated_applications",
+  "setup_academic_programs_tab",
+  "academic_program_name",
+  "period_start_date",
+  "period_end_date",
+  "ap_product_guid"
+ ],
+ "fields": [
+  {
+   "fieldname": "school_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "School Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "opeid",
+   "fieldtype": "Int",
+   "label": "OPEID"
+  },
+  {
+   "fieldname": "address_1",
+   "fieldtype": "Data",
+   "label": "Address 1"
+  },
+  {
+   "fieldname": "address_2",
+   "fieldtype": "Data",
+   "label": "Address 2"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "zip",
+   "fieldtype": "Int",
+   "label": "Zip"
+  },
+  {
+   "fieldname": "servicer",
+   "fieldtype": "Select",
+   "label": "Servicer",
+   "options": "Launch Servicing\nSchool"
+  },
+  {
+   "depends_on": "eval: doc.is_this_a_master_school ==0;",
+   "fieldname": "master_school_name",
+   "fieldtype": "Data",
+   "label": "Master School Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "privacy_notice",
+   "fieldtype": "Check",
+   "label": "Privacy Notice"
+  },
+  {
+   "depends_on": "eval: doc.privacy_notice == 1;",
+   "fieldname": "pn_legal_school_name",
+   "fieldtype": "Data",
+   "label": "PN Legal School Name"
+  },
+  {
+   "depends_on": "eval: doc.privacy_notice == 1;",
+   "fieldname": "pn_school_contact_name",
+   "fieldtype": "Data",
+   "label": "PN School Contact Name"
+  },
+  {
+   "depends_on": "eval: doc.privacy_notice == 1;",
+   "fieldname": "pn_school_contact_phone_number",
+   "fieldtype": "Phone",
+   "label": "PN School Contact Phone Number"
+  },
+  {
+   "depends_on": "eval: doc.privacy_notice == 1;",
+   "fieldname": "pn_school_contact_email",
+   "fieldtype": "Data",
+   "label": "PN School Contact Email"
+  },
+  {
+   "fieldname": "launch_servicing_lender_id",
+   "fieldtype": "Data",
+   "label": "Launch Servicing Lender ID"
+  },
+  {
+   "fieldname": "site_guid",
+   "fieldtype": "Data",
+   "label": "Site GUID"
+  },
+  {
+   "fieldname": "product_guid",
+   "fieldtype": "Data",
+   "label": "Product GUID"
+  },
+  {
+   "fieldname": "school_website",
+   "fieldtype": "Data",
+   "label": "School Website"
+  },
+  {
+   "fieldname": "tutionflexplus_allow_borrower_initiated_applications",
+   "fieldtype": "Select",
+   "label": "Allow Borrower Initiated Applications",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "tuitionflexplus_allow_school_initiated_applications",
+   "fieldtype": "Select",
+   "label": "Allow School Initiated Applications",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "tutionextend_allow_borrower_initiated_applications",
+   "fieldtype": "Select",
+   "label": "Allow Borrower Initiated Applications",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "tuitionextend_allow_school_initiated_applications",
+   "fieldtype": "Select",
+   "label": "Allow School Initiated Applications",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "tuitionextend_interest_rate",
+   "fieldtype": "Float",
+   "label": "Interest Rate"
+  },
+  {
+   "fieldname": "tutionease_allow_borrower_initiated_applications",
+   "fieldtype": "Select",
+   "label": "Allow Borrower Initiated Applications",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "tuitionease_allow_school_initiated_applications",
+   "fieldtype": "Select",
+   "label": "Allow School Initiated Applications",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "create_school_tab",
+   "fieldtype": "Tab Break",
+   "label": "Create School"
+  },
+  {
+   "fieldname": "tuitionflexplus_configurations_tab",
+   "fieldtype": "Tab Break",
+   "label": "TuitionFlexPlus Configurations"
+  },
+  {
+   "fieldname": "tuitionextend_configurations_tab",
+   "fieldtype": "Tab Break",
+   "label": "TuitionExtend Configurations"
+  },
+  {
+   "fieldname": "tuitionease_configuration_tab",
+   "fieldtype": "Tab Break",
+   "label": "TuitionEase Configurations"
+  },
+  {
+   "fieldname": "column_break_mdyj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_this_a_master_school",
+   "fieldtype": "Check",
+   "label": "Is this a master school?"
+  },
+  {
+   "fieldname": "setup_academic_programs_tab",
+   "fieldtype": "Tab Break",
+   "label": "Setup Academic Programs"
+  },
+  {
+   "fieldname": "academic_program_name",
+   "fieldtype": "Data",
+   "label": "Academic Program Name"
+  },
+  {
+   "fieldname": "period_start_date",
+   "fieldtype": "Date",
+   "label": "Period Start Date"
+  },
+  {
+   "fieldname": "period_end_date",
+   "fieldtype": "Date",
+   "label": "Period End Date"
+  },
+  {
+   "fieldname": "ap_product_guid",
+   "fieldtype": "Data",
+   "label": "Product GUID"
+  },
+  {
+   "fieldname": "tuition_extend_setup_school_repayment_terms_section",
+   "fieldtype": "Section Break",
+   "label": "Setup School Repayment Terms"
+  },
+  {
+   "fieldname": "tfplus_setup_school_repayment_terms_section",
+   "fieldtype": "Section Break",
+   "label": "Setup School Repayment Terms"
+  },
+  {
+   "fieldname": "textend_repayment_type",
+   "fieldtype": "Select",
+   "label": "Repayment Type",
+   "options": "Immediate Repayment\nIn School/Out of School\nDeferred Repayment Plan \u2013 Interest Only\nDeferred Repayment Plan \u2013 Fixed Dollar Amount"
+  },
+  {
+   "fieldname": "tfplus_repayment_type",
+   "fieldtype": "Select",
+   "label": "Repayment Type",
+   "options": "Immediate Repayment\nIn School/Out of School\nDeferred Repayment Plan \u2013 Interest Only\nDeferred Repayment Plan \u2013 Fixed Dollar Amount"
+  },
+  {
+   "fieldname": "tease_configurations_section",
+   "fieldtype": "Section Break",
+   "label": "Configurations"
+  },
+  {
+   "fieldname": "textend_configurations_section",
+   "fieldtype": "Section Break",
+   "label": "Configurations"
+  },
+  {
+   "fieldname": "tfplus_configurations_section",
+   "fieldtype": "Section Break",
+   "label": "Configurations"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-27 01:33:10.519872",
+ "modified_by": "Administrator",
+ "module": "Edvisio Demo",
+ "name": "School",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
