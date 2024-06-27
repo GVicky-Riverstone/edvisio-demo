@@ -1,0 +1,45 @@
+<template>
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      x="1"
+      y="1"
+      width="14"
+      height="14"
+      rx="2"
+      stroke="currentColor"
+    />
+    <line
+      x1="4"
+      y1="5"
+      x2="12"
+      y2="5"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <line
+      x1="4"
+      y1="8"
+      x2="12"
+      y2="8"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <line
+      x1="4"
+      y1="11"
+      x2="8"
+      y2="11"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</template>
